@@ -1,0 +1,298 @@
+:root{
+    --main-color:#e38528;
+    --star-color:#9999ff;
+    --cle1-zsize:100;
+}
+
+*{
+    font-family: 'Roboto',sans-serif;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    outline: none;border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    cursor:url("../img/cursor.png"),auto;
+    line-height: 1.5;
+}
+
+@font-face {
+	font-family: 毛笔字体;
+    src: url(../毛笔字体.ttf);
+}
+@font-face {
+    font-family: 汉仪雪韵;
+    src: url(../汉仪雪韵.ttf);
+}
+@font-face {
+    font-family: 标准;
+    src: url(../标准.ttf);
+}
+
+.homeimg{
+    /* background-image: url("../img/cloud_stone.jpg"); */
+    background-image: url("../img/lidong.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 1400px;
+    background-attachment: fixed;
+    width: 100vw;
+    transition: 0.5s ease 0s;
+    animation: emerge 0.3s;
+}
+
+
+.book{
+    position: absolute;
+    right: 0px;bottom: 100px;
+    height: 500px;width: 900px;
+    animation: appear 0.5s linear;
+    /* border-radius: 100%,0,0,100%;
+    box-shadow: 0px 0px 10px black;
+    background-image: linear-gradient(to left,rgba(130, 192, 226, 0.4) 0%,rgba(152, 202, 228, 0.6) 30%,rgba(153, 194, 224, 0.7) 100%); */
+}
+
+.page{
+    position: absolute;
+    right: 0px;bottom: 100px;
+    height: 500px;width: 900px;
+    border-radius: 100%,0,0,100%;
+    box-shadow: 0px 0px 10px black;
+    background-image: linear-gradient(to left,rgba(130, 192, 226, 0.4) 0%,rgba(152, 202, 228, 0.7) 30%,rgba(120, 181, 226, 0.8) 100%);
+}
+
+.btn_1{
+    display: inline-block;
+    margin-top: 1rem;
+    width: 35px;height: 35px;
+    border-radius:50%;
+    background:rgb(73, 151, 197);
+    opacity: 80%;
+    position: absolute;
+    right:500px;bottom:130px;
+    z-index: 9999;
+    box-shadow:0px 0px 10px #000;
+    animation: button_3 1.7s linear;
+    /* content: "我"; */
+}
+
+.btn_1:hover{
+    background: rgb(139, 228, 242);
+    color:black;
+    transition-duration: 0.2s;
+    /* width: 30px;height: 30px;
+    right:352.5px;bottom:32.5px; */
+    padding: 0.4rem 0.8rem;
+    box-shadow:inset 0px 0px 10px #000;
+    opacity: 60%;
+}
+
+.btn_2{
+    display: inline-block;
+    margin-top: 1rem;
+    width: 35px;height: 35px;
+    border-radius:50%;
+    background:rgb(73, 151, 197);
+    opacity: 80%;
+    position: absolute;
+    right:200px;bottom:130px;
+    z-index: 9999;
+    box-shadow:0px 0px 10px #000;
+    animation: button_3 1.7s linear;
+    /* content: "我"; */
+}
+
+.btn_2:hover{
+    background: rgb(139, 228, 242);
+    color:black;
+    transition-duration: 0.2s;
+    /* width: 30px;height: 30px;
+    right:202.5px;bottom:32.5px; */
+    padding: 0.4rem 0.8rem;
+    box-shadow:inset 0px 0px 10px #000;
+    opacity: 60%;
+}
+/* .layer1{
+    position: absolute;
+} */
+
+.pic{
+    position: absolute;
+    left: 80px;bottom: 130px;
+    border-radius: 60%;
+    box-shadow: 0px 0px 10px black;
+    animation: emerge 0.5s linear;
+}
+
+.coursename{
+    display: inline-block;
+    position: absolute;
+    right: 130px;top: 50px;
+    width: 430px;
+    font-size: 23pt;
+    font-family: 汉仪雪韵;
+    text-align: center;
+    background-image: linear-gradient(to left,rgba(140, 243, 252, 0.319) 0%,rgba(116, 238, 249, 0.703) 50%,rgba(162, 247, 255, 0.319) 100%);
+    /* background-image: linear-gradient(to top,rgba(140, 243, 252, 0.319) 0%,rgba(116, 238, 249, 0.703) 50%,rgba(162, 247, 255, 0.319) 100%); */
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    font-size: 15pt;
+    left: 370px;top: 130px;
+    animation: emerge 0.5s linear;
+}
+
+.content span{
+    font-family:汉仪雪韵;
+    font-size: 135%;
+    color: var(--main-color);
+    animation: emerge 0.5s linear;
+}
+
+.layer1{
+    z-index: 20;
+}
+
+.layer2{
+    z-index: 19;
+}
+
+.layer3{
+    z-index: 18;
+}
+
+.layer4{
+    z-index: 17;
+}
+
+
+
+
+/* ============================= 换页箭头 ======================== */
+
+.arrow-left {
+    box-sizing: border-box;
+    position: absolute;
+    top:7px;right:5px;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px
+}
+.arrow-left::after,
+.arrow-left::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    left: 3px
+}
+.arrow-left::after {
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(45deg);
+    bottom: 7px
+}
+.arrow-left::before {
+    width: 16px;
+    height: 2px;
+    bottom: 10px;
+    background: currentColor
+}
+
+.arrow-right {
+    box-sizing: border-box;
+    position: absolute;
+    top:7px;right:5px;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px
+}
+.arrow-right::after,
+.arrow-right::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    right: 3px
+}
+.arrow-right::after {
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid;
+    border-right: 2px solid;
+    transform: rotate(45deg);
+    bottom: 7px
+}
+.arrow-right::before {
+    width: 16px;
+    height: 2px;
+    bottom: 10px;
+    background: currentColor
+}
+
+/* ============================= 头像 ======================== */
+.headshot_border{
+    display: inline-block;
+    position:absolute;
+    top:0;left:0;
+    height:20rem;width:20rem;
+    opacity:0.6;
+    border:1rem solid #66ccff;
+    pointer-events: none;
+    transform: translate(-40%,-40%);
+    border-radius: 50%;
+    z-index: 9;
+    transition: .3s linear;
+    box-shadow:3px 3px 10px #000;
+    /* animation: emerge_headShot 1.5s linear; */
+}
+
+.headshot_background{
+    display: inline-block;
+    position:absolute;
+    top:0;left:0;
+    height:18.5rem;width:18.5rem;
+    opacity:0.8;
+    background: black;
+    transform: translate(-40%,-40%);
+    border-radius: 50%;
+    box-shadow:inset 0px 0px 10px rgb(200, 200, 200);
+    /* animation: emerge_background 1.5s linear; */
+    z-index: 10;
+}
+
+.headshot{
+    position:absolute;
+    top:0px;left:0px;
+    /* padding: 0.6rem 1.0rem; */
+    transition: 0.5s ease 0s;
+    animation: load 0.5s;
+    opacity:0.6;
+    z-index: 11;
+    /* animation: emerge_headShot 1.5s linear; */
+}
+
+.headshot:hover{
+    transition-duration: 1s;
+    transform: scale(1.2);
+    opacity:1;
+}
+
+
+
+
+@keyframes emerge{
+    0%{ 
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

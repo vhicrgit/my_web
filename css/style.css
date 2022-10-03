@@ -1,0 +1,356 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap'); */
+
+:root{
+    --main-color:#e38528;
+    --star-color:#9999ff;
+}
+
+*{
+    font-family: 'Roboto',sans-serif;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    outline: none;border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    cursor:url("../img/cursor.png"),auto;
+    line-height: 1.5;
+}
+
+
+@font-face {
+    font-family: 汉仪雪韵;
+    src: url(../汉仪雪韵.ttf);
+}
+@font-face {
+    font-family: 中山行书;
+    src: url(../汉仪雪韵.ttf);
+}
+/* @font-face {
+    font-family: 标准;
+    src: url(../标准.ttf);
+} */
+/* @font-face {
+	font-family: 毛笔字体;
+    src: url(../毛笔字体.ttf);
+} */
+
+.my_heading{
+    font-size:4.5rem;
+    padding-bottom: 1rem;
+    /* background: linear-gradient(to bottom,#e80ef0, #b81ae8, #ab4aff); */
+    /* background: linear-gradient(to bottom,#cead34, #53b8e0dc); */
+    /* background: linear-gradient(to bottom,#0f0c01, #5c5b5d, #000000); */
+    background: linear-gradient(to bottom,#030202cd, #494444af, #969595aa);
+    position: center;
+    letter-spacing:20px;
+    
+    padding-top:160px;
+    padding-left:380px;
+    font-size: 90pt;
+    font-family:中山行书;
+  	-webkit-background-clip: text;
+  	color: transparent;
+
+    animation: emerge 0.8s linear;
+}
+
+.homeimg{
+    /* background-image: url("../img/cloud_stone.jpg"); */
+    background-image: url("../img/jiazai_1.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 1340px;
+    background-attachment: fixed;
+    width: 100vw;
+    transition: 0.5s ease 0s;
+    animation: load 0.5s;
+}
+
+.sec{
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+}
+
+
+.main{
+    scroll-snap-type: y mandatory;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.mycursor{
+    cursor: url("img/cursor.png");
+    cursor:crosshair
+}
+
+.cursor-1{
+    position:absolute;
+    top:0;left:0;
+    height:1rem;width:1rem;
+    background:var(--star-color);
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+/* ============ btn "初" ============*/
+
+.btn_1{
+    display: inline-block;
+    margin-top: 1rem;
+    width: 80px;
+    padding: 0.5rem 1.1rem;
+    border-radius:50%;
+    background:radial-gradient(circle, #020202cd, #373535aa);
+    box-shadow: 0px 0px 5px black;
+    color:rgb(246, 238, 221);
+    /* color:; */
+    font-size: 1.2rem;
+    position: absolute;
+    right:510px;
+    top:420px;
+
+    animation: emerge 0.8s linear;
+}
+
+.btn_1::before{
+    font-family: 汉仪雪韵;
+    font-size:45px;
+    content: "我";
+}
+
+.btn_1:hover{
+    background: rgb(222, 185, 117);
+    color:black;
+    border-radius:20%;
+    padding: 0.5rem 1.1rem;
+    transition-duration: 0.4s;
+    box-shadow: 0px 0px 10px black;
+    letter-spacing: .2rem;
+    opacity: 60%;
+    right:510px;
+    top:370px;
+}
+
+.btn_1:hover::before{
+    font-size:45px;
+    font-family: 汉仪雪韵;
+    content: "个人介绍";
+}
+
+
+
+
+
+/* ============ btn "往" ============*/
+
+.btn_2{
+    display: inline-block;
+    margin-top: 1rem;
+    width: 80px;
+    padding: 0.5rem 1.1rem;
+    border-radius:50%;
+    background:radial-gradient(circle, #020202cd, #373535aa);
+    box-shadow: 0px 0px 5px black;
+    color:rgb(246, 238, 221);
+    font-size: 1.6rem;
+    position: absolute;
+    right:390px;
+    top:420px;
+    
+    animation: emerge 0.8s linear;
+}
+
+.btn_2::before{
+    font-family: 汉仪雪韵;
+    font-size:45px;
+    content: "课";
+}
+
+.btn_2:hover{
+    background: rgb(222, 185, 117);
+    color:black;
+    border-radius:20%;
+    padding: 0.5rem 1.1rem;
+    transition-duration: 0.4s;
+    box-shadow: 0px 0px 10px black;
+    letter-spacing: .2rem;
+    opacity: 60%;
+    right:390px;
+    top:370px;
+}
+
+.btn_2:hover::before{
+    font-size:45px;
+    font-family: 汉仪雪韵;
+    content: "课业信息";
+}
+
+
+
+/* ============ btn "关" ============*/
+
+.btn_3{
+    display: inline-block;
+    margin-top: 1rem;
+    width: 80px;
+    padding: 0.5rem 1.1rem;
+    border-radius:50%;
+    background:radial-gradient(circle, #020202cd, #373535aa);
+    box-shadow: 0px 0px 5px black;
+    color:rgb(246, 238, 221);
+    font-size: 1.6rem;
+    position: absolute;
+    right:270px;
+    top:420px;
+
+    animation: emerge 0.8s linear;
+}
+
+.btn_3::before{
+    font-family: 汉仪雪韵;
+    font-size:45px;
+    content: "相";
+}
+
+.btn_3:hover{
+    background: rgb(222, 185, 117);
+    color:black;
+    border-radius:20%;
+    padding: 0.5rem 1.1rem;
+    transition-duration: 0.4s;
+    box-shadow: 0px 0px 10px black;
+    letter-spacing: .2rem;
+    opacity: 60%;
+    right:270px;
+    top:370px;
+}
+
+.btn_3:hover::before{
+    font-size:45px;
+    font-family: 汉仪雪韵;
+    content: "我的相簿";
+    
+}
+
+/* .btn_3_pos{
+    padding-top:250px;
+    padding-right:300px;
+} */
+
+/* ============ btn "离" ============*/
+
+.btn_4{
+    display: inline-block;
+    margin-top: 1rem;
+    width: 80px;
+    padding: 0.5rem 1.1rem;
+    border-radius:50%;
+    background:radial-gradient(circle, #020202cd, #373535aa);
+    box-shadow: 0px 0px 5px black;
+    color:rgb(246, 238, 221);
+    font-size: 1.6rem;
+    position: absolute;
+    right:150px;
+    top:420px;
+
+    animation: emerge 0.8s linear;
+}
+
+.btn_4::before{
+    font-family: 汉仪雪韵;
+    font-size:45px;
+    content: "离";
+}
+
+.btn_4:hover{
+    background: rgb(222, 185, 117);
+    color:black;
+    border-radius:20%;
+    padding: 0.5rem 1.1rem;
+    transition-duration: 0.4s;
+    box-shadow: 0px 0px 10px black;
+    letter-spacing: .2rem;
+    opacity: 60%;
+    right:150px;
+    top:370px;
+}
+
+.btn_4:hover::before{
+    font-size:45px;
+    font-family: 汉仪雪韵;
+    content: "离开页面";
+    
+}
+
+
+@keyframes emerge{
+    0%{ 
+        opacity: 0;
+    }
+    100%{
+        opacity: 70%;
+    }
+}
+
+.foot{
+    width: 100vw;
+    height: 100px;
+    float: left;
+    clear: both;
+    text-align: center;
+    line-height: 5px;
+    background-color: rgba(252, 234, 175, 0.8);
+}
+.foot p{
+    line-height: 25px;
+    color: rgb(28, 43, 43);
+}
+
+
+
+/* .btn_2{
+    display: inline-block;
+    margin-top: 1rem;
+    width: 90px;
+    padding: 0.6rem 1.3rem;
+    border-radius:50%;
+    background:radial-gradient(circle, #020202cd, #373535aa);
+    box-shadow: 0px 0px 5px black;
+    color:rgb(246, 238, 221);
+    font-size: 1.6rem;
+    position: absolute;
+    right:390px;
+    top:450px;
+    
+    animation: emerge 0.8s linear;
+}
+
+.btn_2::before{
+    font-family: 汉仪雪韵;
+    font-size:50px;
+    content: "课";
+}
+
+.btn_2:hover{
+    background: rgb(222, 185, 117);
+    color:black;
+    border-radius:20%;
+    padding: .8rem 1.5rem;
+    transition-duration: 0.4s;
+    box-shadow: 0px 0px 10px black;
+    letter-spacing: .2rem;
+    opacity: 60%;
+    right:390px;
+    top:390px;
+}
+
+.btn_2:hover::before{
+    font-size:45px;
+    font-family: 汉仪雪韵;
+    content: "课业信息";
+} */

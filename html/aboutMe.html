@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/aboutMe.css">
+    <title>关于我</title>
+</head>
+
+<body>
+    <script>
+        let cnt = 20;
+        function change(x){
+            if(x==1){
+                x = "layer1";xx = "btn_1";
+                y = "layer2";yy = "btn_2";
+                z = "layer3";zz = "btn_3";
+            }
+            else if(x==2){
+                x = "layer2";xx = "btn_2";
+                y = "layer1";yy = "btn_1";
+                z = "layer3";zz = "btn_3";
+            }
+            else{
+                x = "layer3";xx = "btn_3";
+                y = "layer1";yy = "btn_1";
+                z = "layer2";zz = "btn_2";
+            }
+            document.getElementById(x).style.display = 'inline-block';
+            document.getElementById(y).style.display = 'none';
+            document.getElementById(z).style.display = 'none';
+            document.getElementById(xx).style.background = 'rgb(139, 228, 242)';
+            document.getElementById(yy).style.background = 'rgb(73, 151, 197)';
+            document.getElementById(zz).style.background = 'rgb(73, 151, 197)';
+        }
+    </script>
+
+<div class="btn_1" id="btn_1" onclick="change(1);">我</div>
+<div class="btn_2" id="btn_2" onclick="change(2);">乡</div>
+<div class="btn_3" id="btn_3" onclick="change(3);">历</div>
+<div class="homeimg">
+    <!-- <div class="semi-circle-2"></div> -->
+    <div class="headshot_border"></div>
+    <div class="headshot_background"></div>
+    <div class="headshot">
+        <a href="../index.html">
+            <img src="../img/moyi.png" alt="" height="140px" width="105px">
+        </a>
+    </div>
+    <div class="elliptical-1">
+        <div id="layer1" z-index="101">
+            <div class="basic_info">
+                <p><span>姓 名:  </span> 左 丰 瑞</p>
+                <p><span>学 号:  </span> PB20061337</p>
+            </div>
+            <div class="box-container">
+                <div class="info">
+                    <p><span>年龄:</span><script>
+                        document.writeln(cnt);
+                        </script></p>
+                    <p><span>性别:</span>男</p>
+                    <p><span>年级:</span>三年级</p>
+                    <p><span>学院:</span>计算机科学与技术学院</p>
+                </div>
+                <div class="info">
+                    <p><span>国籍:</span>中国</p>
+                    <p><span>家乡:</span>陕西安康</p>
+                    <p><span>邮箱:</span>vhicr@mail.ustc.edu.cn</p>
+                    <p><span>移动电话:</span>18391565201</p>
+                </div>
+            </div>
+            <div class="intro">
+                <p><span>个人简介:</span>普通的计科大三学生一枚，擅长写bug、造CPU，爱好网球、游泳、
+                    <br><PRE>&#9</PRE>音乐、游戏，仙剑迷(如你所见，这是一个仙剑五风格网页)</p>
+            </div>
+        </div>
+
+        <div id="layer2" z-index="102">
+            <div class="basic_info">
+                <p><span>故 乡:  </span> 陕西-安康</p>
+            </div>
+            <div class="akpos">
+                <img src="../img/AnKang_2.jpeg" alt="" height="240px" width="320px" class="akpic"/>
+            </div>
+            <div class="hometown">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;安康，陕西省辖地级市，位于陕西东南部，北依秦岭，南靠巴山，汉水横贯东西，河谷盆地（安康盆地）居中。
+                    安康是南水北调中线工程的核心水源区，承担着“一江清水供北京”的光荣使命和政治责任。
+                    安康在大地构造位置上属于秦岭地槽褶皱系南部和扬子准地台北部汉南古陆的东北缘，分别由东西走向的秦岭地槽褶皱带和北西走向的大巴山弧形褶皱带复合交接组成。
+                </p>
+            </div>
+        </div>
+
+        <div id="layer3" z-index="103">
+            <div class="title">
+                <p><span>个人经历</span></p>
+            </div>
+            <div class="experience">
+                <p>2014年9月  进入汉滨区初级中学就读</p>
+                <p><br></p>
+                <p>2017年9月  进入陕西省安康中学就读</p>
+                <p><br></p>
+                <p>2020年9月  进入中国科学技术大学就读</p>
+                <p><br></p>
+                <p>2022年3月  转入计算机科学与技术学院</p>
+                <p><br></p>
+                <p>2022年9月  获得“龙芯杯”团体赛三等奖</p>
+            </div>
+        </div>
+    </div>
+    
+<!-- <script>alert('测试')</script> -->
+</div>
+
+
+</body>
+
+
+<script src="../js/aboutMe.js"></script>
+
+</html>

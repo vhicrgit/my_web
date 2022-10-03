@@ -1,0 +1,23 @@
+@charset "utf-8";
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/heying.png");
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgba(91, 105, 136, 0.8);
+}
+
+::-webkit-scrollbar-track{
+    background: rgb(194, 213, 241);
+}
